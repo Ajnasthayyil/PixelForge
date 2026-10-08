@@ -1,4 +1,4 @@
-﻿( function($) {
+( function($) {
   'use strict';
   	
 
@@ -114,6 +114,22 @@
 	    dots:false,
 	    items:1
 	});
+
+    /* Carousel features */
+    $('.carousel-features').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
+        }
+    });
 
     /* Send form */
 	if ($('.js-ajax-form').length) {
