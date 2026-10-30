@@ -1529,19 +1529,33 @@ ion-icon{
 /* Watermark */
 .zen-watermark {
   position: absolute;
-  bottom: 8%;
+  bottom: 4%;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 900;
-  font-size: clamp(6rem, 14vw, 15rem);
+  font-size: clamp(5rem, 13.5vw, 14.5rem);
   letter-spacing: 0.08em;
-  color: rgba(0, 0, 0, 0.038);
+  color: rgba(0, 0, 0, 0.042);
   white-space: nowrap;
   pointer-events: none;
   z-index: 1;
   text-transform: uppercase;
   user-select: none;
+  line-height: 0.85;
+}
+
+.scroll-wrap > .container,
+.scroll-wrap > .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .zen-watermark {
+    font-size: clamp(3rem, 15vw, 5.5rem);
+    bottom: 2%;
+  }
 }
 
 /* Right Side Partners Card */
