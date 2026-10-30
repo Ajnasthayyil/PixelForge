@@ -626,20 +626,23 @@ ion-icon{
   position: absolute;
   left: 0;
   width: 100%;
-  bottom:0;
-  padding:0 1.5rem 3rem 1.5rem;
+  bottom: 0;
+  padding: 0 1.5rem 2rem 1.5rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
   transition: opacity 0.3s ease;
-}
-
-body.pp-viewing-home .navbar-bottom,
-body:not([class*="pp-viewing-"]) .navbar-bottom {
-  display: none !important;
 }
 
 @media (min-width: 992px){
   .navbar-bottom{
-    padding-left: 3rem;
-    padding-right:3rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 }
 
@@ -1379,57 +1382,453 @@ body:not([class*="pp-viewing-"]) .navbar-bottom {
   letter-spacing: -0.02em;
 }
 
-/* Bottom Glassmorphic Dock Bar */
-.zen-dock-bar {
-  position: absolute;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 7rem);
-  max-width: 1400px;
-  background: rgba(14, 15, 17, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+/*-------------------------------------------------------------------------------
+  Zenrixa Design System - All Sections
+-------------------------------------------------------------------------------*/
+
+.zen-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #0c0d0e;
+  margin-bottom: 1.25rem;
+}
+
+.text-white .zen-section-title {
+  color: #ffffff !important;
+}
+
+.zen-section-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.zen-highlight {
+  color: #000000;
+  background: #D4F21B;
+  padding: 2px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 800;
+}
+
+/* Service Pills */
+.zen-service-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.zen-service-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.035);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 8px 18px;
   border-radius: 100px;
-  padding: 13px 34px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.zen-service-pill:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: translateY(-2px);
+}
+
+.zen-service-pill .pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D4F21B;
+}
+
+/* Experience Card / Floating Badge */
+.zen-exp-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: rgba(14, 15, 17, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 18px 26px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.zen-exp-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #D4F21B;
+  line-height: 1;
+}
+
+.zen-exp-lbl {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+/* Target Audience Cards (Experience Section) */
+.zen-target-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.zen-target-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 242, 27, 0.4);
+  transform: translateY(-2px);
+}
+
+.zen-target-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.zen-target-icon {
+  font-size: 1.3rem;
+  color: #D4F21B;
+  transition: transform 0.3s ease;
+}
+
+.zen-target-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 0.75rem;
+}
+
+/* Capability Progress Tracks */
+.zen-skill-item {
+  margin-bottom: 1.75rem;
+}
+
+.zen-skill-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.6rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: #e5e7eb;
-  letter-spacing: 0.02em;
-  z-index: 20;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
-.dock-bullet {
-  color: rgba(255, 255, 255, 0.45);
-  margin-right: 6px;
+.zen-skill-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
 }
 
-.dock-scroll-btn {
-  color: #ffffff !important;
+.zen-skill-pct {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.zen-skill-track {
+  height: 7px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.zen-skill-bar {
+  height: 100%;
+  background: #0c0d0e;
+  border-radius: 10px;
+  position: relative;
+  transition: width 1s ease;
+}
+
+.zen-skill-bar.lime-bar {
+  background: #D4F21B;
+}
+
+/* Projects / Portfolio Cards */
+.zen-project-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(20, 22, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.2rem 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
   text-decoration: none !important;
-  font-weight: 600;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 200px;
+}
+
+.zen-project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 242, 27, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.zen-project-cat {
+  display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #D4F21B;
+  background: rgba(212, 242, 27, 0.12);
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.zen-project-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.zen-project-arrow {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.zen-project-card:hover .zen-project-arrow {
+  background: #D4F21B;
+  color: #000000;
+  transform: rotate(45deg);
+}
+
+/* Feature Cards (Why Us) */
+.zen-feature-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 2.2rem 1.8rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.025);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+
+.zen-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.zen-feature-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(212, 242, 27, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.zen-feature-icon-box ion-icon {
+  font-size: 1.8rem;
+  color: #0c0d0e;
+}
+
+.zen-feature-card h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0c0d0e;
+  margin-bottom: 0.75rem;
+}
+
+.zen-feature-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* FAQ Cards */
+.zen-faq-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 1.25rem 1.6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.zen-faq-card:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.zen-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.zen-faq-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111827;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.zen-faq-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #111827;
+  min-width: 32px;
+  transition: all 0.25s ease;
+}
+
+.zen-faq-question:hover .zen-faq-toggle {
+  background: #000000;
+  color: #ffffff;
+}
+
+.zen-faq-answer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Details & Form */
+.zen-contact-box {
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1rem;
+}
+
+.zen-contact-icon {
+  font-size: 1.4rem;
+  color: #0c0d0e;
+}
+
+.zen-form-control {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  height: auto !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.zen-form-control:focus {
+  border-color: #0c0d0e !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+textarea.zen-form-control {
+  min-height: 120px !important;
+}
+
+.zen-btn-submit {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: opacity 0.2s ease;
+  background: #0c0d0e;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 8px 8px 26px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dock-scroll-btn:hover {
-  opacity: 0.75;
+.zen-btn-submit:hover {
+  background: #1f2125;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Hide legacy bottom navbar when on home section */
-body.pp-viewing-home .navbar-bottom {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
+.zen-btn-submit .zen-arrow-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  color: #0a0a0c;
+  border-radius: 50%;
+  margin-left: 14px;
 }
 
 /* Responsive Styles */
