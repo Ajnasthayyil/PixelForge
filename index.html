@@ -9,7 +9,7 @@
 
 	<!-- CSS -->
 	<link
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.pagepiling.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -30,28 +30,46 @@
 	<!-- Click capture -->
 	<div class="click-capture"></div>
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-desctop">
-		<div class="position-relative w-100">
+	<!-- Navbar (Zenrixa Style) -->
+	<nav class="navbar navbar-desctop zen-header">
+		<div class="zen-header-inner w-100 d-flex align-items-center justify-content-between">
+			<!-- Brand -->
+			<a class="navbar-brand zen-brand" href="#home">
+				<span class="zen-logo-symbol">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</span>
+				<span class="zen-brand-text">PixelForge</span>
+			</a>
 
-			<!-- Brand-->
-			<a class="navbar-brand font-weight-bold" href="#"
-				style="font-size: 1.6rem; letter-spacing: -0.5px;">Pixel<span class="text-dark"
-					style="background-color: #D4F21B; padding: 0 4px; font-weight: 800;">Forge</span></a>
-			<div class="container d-block">
-				<span class="phone ml-4 my-0 d-none d-md-block"><a href="tel:+917025882784"
-						style="color: inherit; text-decoration: none;">+91 7025882784</a></span>
-				<span class="email  my-0 d-none d-md-block"><a href="mailto:pixelforge.design@gmail.com"
-						style="color: inherit; text-decoration: none;">pixelforge.design@gmail.com</a></span>
+			<!-- Center Links -->
+			<ul class="zen-nav-menu d-none d-lg-flex mb-0">
+				<li><a href="#home" class="active">Home <span class="zen-dot">◇</span></a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#partners">Partners</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+
+			<!-- Right Status & Menu Pill -->
+			<div class="zen-header-right d-flex align-items-center">
+				<div class="zen-info-capsule d-none d-md-flex">
+					<span class="capsule-sub">Status</span>
+					<span class="capsule-main">Open &bull; 2026</span>
+				</div>
+				<button class="toggler zen-menu-trigger" aria-label="Open Menu">
+					<span class="zen-bars">
+						<span></span>
+						<span></span>
+					</span>
+					<span class="zen-menu-lbl">MENU</span>
+				</button>
 			</div>
-
-			<!-- Let's Talk CTA & Toggler -->
-			<a href="#contact" class="btn-nav-action d-none d-md-inline-flex">Let's Talk &rarr;</a>
-			<button class="toggler">
-				<span class="toggler-icon"></span>
-				<span class="toggler-icon"></span>
-				<span class="toggler-icon"></span>
-			</button>
 		</div>
 	</nav>
 
@@ -103,44 +121,63 @@
 
 	<div id="pagepiling">
 
-		<!-- Masthead -->
+		<!-- Masthead (Zenrixa Style) -->
 		<section id="home"
 			class="pp-scrollable d-flex align-items-center section position-absolute"
 			style="background-image:url('img/pixelforgebg.png');" role="main">
 			<div class="intro">
 				<div class="scroll-wrap">
-					<div class="container-fluid hero-container">
-						<div class="row">
-							<div class="col-12 col-md-11 col-lg-8 col-xl-7">
-								<div class="hero-content-wrap">
-									<div class="hero-status-pill mb-3">
-										<span class="status-pulse"></span>
-										<span class="status-text">PIXELFORGE DIGITAL</span>
-										<span class="status-divider">/</span>
-										<span class="status-avail">AVAILABLE FOR PROJECTS</span>
-									</div>
-									<h1 class="text-dark hero-title">A <span class="badge-studio-modern">digital studio</span> for<br>
-										<span class="text-lime-glow">web development</span>,<br>mobile apps &amp; UI/UX design.
+					<!-- Giant Background Watermark -->
+					<div class="zen-watermark" aria-hidden="true">PIXELFORGE</div>
+
+					<div class="container-fluid zen-container">
+						<div class="row align-items-center">
+							<div class="col-12 col-md-11 col-lg-7 col-xl-6">
+								<div class="zen-hero-content">
+									<!-- Category Tagline -->
+									<div class="zen-category mb-3">| Creative Agency</div>
+
+									<!-- Main Headline -->
+									<h1 class="zen-title">
+										A digital studio<br>
+										for web development,<br>
+										mobile apps &amp;<br>
+										UI/UX design.
 									</h1>
-									<p class="hero-desc text-muted mt-3 mb-4">
-										We combine high-performance engineering with award-winning design to create impactful digital products and scalable web applications.
-									</p>
-									<div class="hero-cta-group d-flex align-items-center flex-wrap mt-3">
-										<a href="#projects" class="btn btn-modern-lime mr-3 mb-2">
-											<span>Explore Projects</span>
-											<ion-icon name="arrow-forward-outline"></ion-icon>
-										</a>
-										<a href="#contact" class="btn btn-modern-outline mb-2">
-											<span>Get In Touch</span>
-										</a>
+
+									<!-- Rating Row -->
+									<div class="zen-rating-row mb-4">
+										<span class="zen-stars">★★★★★</span>
+										<span class="zen-rating-count">3000+ Customers</span>
 									</div>
-									<div class="hero-pills-row d-flex align-items-center flex-wrap mt-3">
-										<span class="hero-pill-item mr-3 mb-2"><ion-icon name="flash-outline"></ion-icon> High Performance</span>
-										<span class="hero-pill-item mr-3 mb-2"><ion-icon name="layers-outline"></ion-icon> Scalable Tech</span>
-										<span class="hero-pill-item mb-2"><ion-icon name="sparkles-outline"></ion-icon> Bespoke UI/UX</span>
+
+									<!-- Action Buttons -->
+									<div class="zen-btn-group">
+										<a href="#contact" class="zen-btn-dark">
+											<span>Chat With Us</span>
+											<span class="zen-arrow-badge">
+												<ion-icon name="arrow-forward-outline"></ion-icon>
+											</span>
+										</a>
+										<a href="#projects" class="zen-btn-ghost">
+											<span>Our Works</span>
+										</a>
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+
+					<!-- Bottom Glassmorphic Dock Bar -->
+					<div class="zen-dock-bar d-none d-md-flex">
+						<div class="dock-left">
+							<span class="dock-bullet">&bull;</span> 7+ Years Exp
+						</div>
+						<div class="dock-center">
+							<span class="dock-bullet">&bull;</span> Based in Kerala, India
+						</div>
+						<div class="dock-right">
+							<a href="#about" class="dock-scroll-btn">Scroll Down <span class="dock-arrow">&darr;</span></a>
 						</div>
 					</div>
 				</div>

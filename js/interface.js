@@ -47,7 +47,13 @@
   
 
         function NavbarColor(){
-         if ($('.pp-section.active').hasClass('navbar-is-white')){
+            if ($('#home').hasClass('active')){
+                $('.navbar-bottom').fadeOut(150);
+            } else {
+                $('.navbar-bottom').fadeIn(200);
+            }
+
+            if ($('.pp-section.active').hasClass('navbar-is-white')){
                 $('.navbar-desctop').addClass('navbar-white');
                 $('.progress-nav').addClass('progress-nav-white');
                 $('.navbar-bottom').addClass('navbar-bottom-white');
