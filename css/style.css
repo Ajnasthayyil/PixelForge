@@ -1550,7 +1550,13 @@ ion-icon{
   line-height: 0.85;
 }
 
-.scroll-wrap > .container,
+.scroll-wrap > .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1260px;
+  width: 100%;
+}
+
 .scroll-wrap > .container-fluid {
   position: relative;
   z-index: 2;
@@ -1604,9 +1610,9 @@ ion-icon{
 
 .zen-section-title {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(1.85rem, 2.6vw, 2.7rem);
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -0.04em;
   color: #0b0c0e;
   margin-bottom: 0.85rem;
@@ -1618,10 +1624,11 @@ ion-icon{
 
 .zen-section-desc {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  line-height: 1.65;
   color: #4b5563;
   letter-spacing: -0.01em;
+  max-width: 650px;
 }
 
 .zen-highlight {
@@ -1643,19 +1650,19 @@ ion-icon{
 .zen-service-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .zen-service-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: rgba(0, 0, 0, 0.035);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 3.5px 10px;
+  padding: 5.5px 14px;
   border-radius: 100px;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: #1f2937;
   letter-spacing: 0.01em;
@@ -1733,7 +1740,7 @@ ion-icon{
 
 .zen-target-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -1744,16 +1751,16 @@ ion-icon{
 }
 
 .zen-target-icon {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #D4F21B;
   transition: transform 0.3s ease;
 }
 
 .zen-target-desc {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.86rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
   margin-top: 0.35rem;
   margin-bottom: 0.1rem;
 }
@@ -1772,13 +1779,13 @@ ion-icon{
 }
 
 .zen-skill-name {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #111827;
 }
 
 .zen-skill-pct {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #6b7280;
 }
@@ -1846,7 +1853,7 @@ ion-icon{
 
 .zen-project-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #ffffff;
@@ -1910,7 +1917,7 @@ ion-icon{
 
 .zen-feature-card h5 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #0c0d0e;
@@ -1919,8 +1926,8 @@ ion-icon{
 
 .zen-feature-card p {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.86rem;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  line-height: 1.6;
   color: #4b5563;
   margin: 0;
 }
@@ -1950,7 +1957,7 @@ ion-icon{
 
 .zen-faq-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: #111827;
@@ -1979,8 +1986,8 @@ ion-icon{
 
 .zen-faq-answer {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.86rem;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  line-height: 1.6;
   color: #4b5563;
   margin-top: 0.5rem;
   padding-top: 0.45rem;
@@ -2066,7 +2073,7 @@ textarea.zen-form-control {
 #about img.border-radius,
 #skills img.border-radius,
 #news img.border-radius {
-  max-height: 330px;
+  max-height: 380px;
   width: auto;
   max-width: 100%;
   object-fit: cover;
@@ -2115,31 +2122,31 @@ textarea.zen-form-control {
   background: #000000 !important;
 }
 
-/* Height media queries to guarantee 1-screen fit on all displays */
-@media (max-height: 780px) {
+/* Height media queries to guarantee 1-screen fit on very small displays */
+@media (max-height: 640px) {
   .zen-section-title {
-    font-size: clamp(1.5rem, 2.1vw, 2.1rem);
-    margin-bottom: 0.6rem;
+    font-size: clamp(1.65rem, 2.3vw, 2.2rem);
+    margin-bottom: 0.5rem;
   }
   .zen-section-desc {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     line-height: 1.5;
-    margin-bottom: 0.9rem !important;
+    margin-bottom: 0.8rem !important;
   }
   #about img.border-radius,
   #skills img.border-radius,
   #news img.border-radius {
-    max-height: 260px;
+    max-height: 250px;
   }
   .zen-target-card {
     padding: 0.65rem 1.1rem;
     margin-bottom: 0.45rem;
   }
   .zen-target-title {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
   .zen-target-desc {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     line-height: 1.45;
   }
   .zen-project-card {
@@ -2147,7 +2154,7 @@ textarea.zen-form-control {
     min-height: 165px;
   }
   .zen-project-title {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
   }
   .zen-feature-card {
     padding: 1.25rem 1.15rem;
@@ -2165,11 +2172,11 @@ textarea.zen-form-control {
   }
 }
 
-@media (max-height: 680px) {
+@media (max-height: 560px) {
   #about img.border-radius,
   #skills img.border-radius,
   #news img.border-radius {
-    max-height: 200px;
+    max-height: 190px;
   }
   .zen-exp-badge {
     padding: 8px 14px;
