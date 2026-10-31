@@ -35,12 +35,17 @@
             anchors: ['home', 'about', 'experience', 'skills', 'projects', 'partners', 'testimonials', 'news', 'contact'],
             afterRender: function(anchorLink, index){ 
               NavbarColor();
-
+              if (!window.location.hash || window.location.hash === '#home' || anchorLink === 'home') {
+                  $('body').addClass('pp-viewing-home');
+              }
             },
             afterLoad: function(anchorLink, index){
                 $('.pp-section .intro').removeClass('animate');
                 $('.active .intro').addClass('animate');
                 NavbarColor();
+                if (anchorLink === 'home') {
+                    $('body').addClass('pp-viewing-home');
+                }
             }
         });
 
