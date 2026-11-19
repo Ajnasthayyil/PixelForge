@@ -2138,7 +2138,15 @@ textarea.zen-form-control {
 }
 
 /* Image scaling for clean single view fit */
-#about img.border-radius,
+#about img.border-radius {
+  max-height: 380px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
 #skills img.border-radius,
 #news img.border-radius {
   max-height: 380px;
