@@ -2293,6 +2293,30 @@ textarea.zen-form-control {
   .zen-dock-bar {
     display: none !important;
   }
+  .progress-nav {
+    display: none !important;
+  }
+  .section.pp-scrollable {
+    display: block !important;
+  }
+  .pp-scrollable {
+    -webkit-overflow-scrolling: touch;
+  }
+  .pp-scrollable .intro {
+    height: auto !important;
+    min-height: 100% !important;
+    white-space: normal !important;
+    display: block !important;
+  }
+  .pp-scrollable .intro:before {
+    display: none !important;
+  }
+  .pp-scrollable .scroll-wrap {
+    display: block !important;
+    vertical-align: top !important;
+    padding-top: 4.8rem !important;
+    padding-bottom: 3.5rem !important;
+  }
   body.pp-viewing-home .navbar-bottom {
     opacity: 1;
     pointer-events: auto;
@@ -2340,15 +2364,25 @@ textarea.zen-form-control {
   .zen-home-socials {
     margin-top: 1.2rem;
   }
+  .zen-project-title {
+    padding-right: 2.5rem;
+  }
+  .col-project-box,
+  .row-project-box {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 480px) {
   #home {
-    background-size: auto 36%;
-    background-position: right -50px bottom 5px;
+    background-size: auto 34%;
+    background-position: right -45px bottom 5px;
   }
   .zen-title {
     font-size: 1.95rem;
+  }
+  .zen-title br {
+    display: none;
   }
   .zen-section-title {
     font-size: clamp(1.6rem, 7vw, 2.1rem);
@@ -2359,6 +2393,9 @@ textarea.zen-form-control {
   .zen-service-pill {
     padding: 4px 10px;
     font-size: 0.76rem;
+  }
+  .zen-watermark {
+    display: none !important;
   }
 }
 
