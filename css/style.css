@@ -2309,11 +2309,56 @@ textarea.zen-form-control {
 
 @media (max-width: 767px) {
   #home {
-    background-size: auto 50%;
-    background-position: right -80px bottom 40px;
+    background-size: auto 42%;
+    background-position: right -65px bottom 5px;
   }
   .zen-title {
-    font-size: 2.1rem;
+    font-size: 2.15rem;
+    line-height: 1.15;
+  }
+  .zen-hero-content {
+    position: relative;
+    z-index: 5;
+  }
+  .zen-btn-ghost {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .photo-icon {
+    display: none !important;
+  }
+  .zen-container,
+  .scroll-wrap > .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .zen-form-control {
+    font-size: 16px !important;
+  }
+  .zen-home-socials {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    background-size: auto 36%;
+    background-position: right -50px bottom 5px;
+  }
+  .zen-title {
+    font-size: 1.95rem;
+  }
+  .zen-section-title {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+  }
+  .zen-service-pills {
+    gap: 6px;
+  }
+  .zen-service-pill {
+    padding: 4px 10px;
+    font-size: 0.76rem;
   }
 }
 
